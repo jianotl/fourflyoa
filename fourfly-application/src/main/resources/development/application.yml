@@ -1,0 +1,21 @@
+# spring configuration
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  profiles:
+    active: development,druid
+  resource:
+    add-mappings: true
+  datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost/fourflyoa?autoReconnect=true&zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+      username: root
+      password: root
+server:
+  port: 8080
+
+# LOGGING
+# todo 注意logging
+#logging:
+#  config: classpath:logging-config.xml
