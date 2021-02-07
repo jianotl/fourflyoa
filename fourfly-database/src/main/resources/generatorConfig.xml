@@ -1,0 +1,680 @@
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<context id="fourflyDB2Tables" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<!-- 是否去掉注释 -->
+			<property name="suppressDate" value="true" />
+			<property name="suppressAllComments" value="false" />
+		</commentGenerator>
+		<jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+			connectionURL="jdbc:mysql://127.0.0.1:3306/fourflyoa?useUnicode=true&amp;characterEncoding=UTF-8&amp;useSSL=false&amp;serverTimezone=GMT%2B8"
+			userId="root" password="root" />
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<!-- 实体定义地址 -->
+		<javaModelGenerator targetPackage="com.org.fourfly.model"
+			targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<!-- sql的配置文件定义 -->
+		<sqlMapGenerator targetPackage="mapper/"
+			targetProject="src/main/resources">
+			<property name="enableSubPackages" value="false" />
+		</sqlMapGenerator>
+		<!-- DAO定义 XMLMAPPER是xml的配置方式，还有ANNOTabelMapper的是注解方式 -->
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.org.fourfly.mapper" targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<!-- 1-10 -->
+		<!-- table   fourfly_admin -->
+		<table tableName="fourfly_admin" domainObjectName="FourflyAdmin"
+		       enableCountByExample="false" enableUpdateByExample="true"
+		       enableDeleteByExample="false" enableSelectByExample="true"
+		       selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_assetm -->
+		<table tableName="fourfly_assetm" domainObjectName="FourflyAssetm"
+		       enableCountByExample="false" enableUpdateByExample="true"
+		       enableDeleteByExample="false" enableSelectByExample="true"
+		       selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_book -->
+		<table tableName="fourfly_book" domainObjectName="FourflyBook"
+		       enableCountByExample="false" enableUpdateByExample="true"
+		       enableDeleteByExample="false" enableSelectByExample="true"
+		       selectByExampleQueryId="false"></table>
+		<!-- table   fourfly_bookborrow -->
+		<table tableName="fourfly_bookborrow" domainObjectName="FourflyBookborrow"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_carm -->
+		<table tableName="fourfly_carm" domainObjectName="FourflyCarm"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_carmang -->
+		<table tableName="fourfly_carmang" domainObjectName="FourflyCarmang"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table   fourfly_carmrese -->
+		<table tableName="fourfly_carmrese" domainObjectName="FourflyCarmrese"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_carms -->
+		<table tableName="fourfly_carms" domainObjectName="FourflyCarms"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_chargems -->
+		<table tableName="fourfly_chargems" domainObjectName="FourflyChargems"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table   fourfly_city -->
+		<table tableName="fourfly_city" domainObjectName="FourflyCity"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_company -->
+		<table tableName="fourfly_company" domainObjectName="FourflyCompany"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+
+		<!-- 11-20 -->
+		<!-- table  fourfly_custappy -->
+		<table tableName="fourfly_custappy" domainObjectName="FourflyCustappy"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table   fourfly_custfina -->
+		<table tableName="fourfly_custfina" domainObjectName="FourflyCustfina"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_customer -->
+		<table tableName="fourfly_customer" domainObjectName="FourflyCustomer"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_custract -->
+		<table tableName="fourfly_custract" domainObjectName="FourflyCustract"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table   fourfly_custsale -->
+		<table tableName="fourfly_custsale" domainObjectName="FourflyCustsale"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_daily -->
+		<table tableName="fourfly_daily" domainObjectName="FourflyDaily"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_dailyfx -->
+		<table tableName="fourfly_dailyfx" domainObjectName="FourflyDailyfx"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table   fourfly_demo -->
+		<table tableName="fourfly_demo" domainObjectName="FourflyDemo"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_dept -->
+		<table tableName="fourfly_dept" domainObjectName="FourflyDept"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_editrecord -->
+		<table tableName="fourfly_editrecord" domainObjectName="FourflyEditrecord"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table   fourfly_email_cont -->
+		<table tableName="fourfly_email_cont" domainObjectName="FourflyEmailCont"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+
+		<!-- 21-30 -->
+		<!-- table  fourfly_emailm -->
+		<table tableName="fourfly_emailm" domainObjectName="FourflyEmailm"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_emails -->
+		<table tableName="fourfly_emails" domainObjectName="FourflyEmails"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table   fourfly_file -->
+		<table tableName="fourfly_file" domainObjectName="FourflyFile"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_files -->
+		<table tableName="fourfly_files" domainObjectName="FourflyFiles"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_fininfom -->
+		<table tableName="fourfly_fininfom" domainObjectName="FourflyFininfom"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table   fourfly_fininfos -->
+		<table tableName="fourfly_fininfos" domainObjectName="FourflyFininfos"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_finpiao -->
+		<table tableName="fourfly_finpiao" domainObjectName="FourflyFinpiao"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_flow_bill -->
+		<table tableName="fourfly_flow_bill" domainObjectName="FourflyFlowBill"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table   fourfly_flow_chao -->
+		<table tableName="fourfly_flow_chao" domainObjectName="FourflyFlowChao"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_flow_checks -->
+		<table tableName="fourfly_flow_checks" domainObjectName="FourflyFlowChecks"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+
+		<!-- 31-40 -->
+		<!-- table  fourfly_flow_cname -->
+		<table tableName="fourfly_flow_cname" domainObjectName="FourflyFlowCname"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table   fourfly_flow_course -->
+		<table tableName="fourfly_flow_course" domainObjectName="FourflyFlowCourse"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_flow_element -->
+		<table tableName="fourfly_flow_element" domainObjectName="FourflyFlowElement"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_flow_extent -->
+		<table tableName="fourfly_flow_extent" domainObjectName="FourflyFlowExtent"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table   fourfly_flow_log -->
+		<table tableName="fourfly_flow_log" domainObjectName="FourflyFlowLog"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_flow_menu -->
+		<table tableName="fourfly_flow_menu" domainObjectName="FourflyFlowMenu"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_flow_remind -->
+		<table tableName="fourfly_flow_remind" domainObjectName="FourflyFlowRemind"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_flow_set -->
+		<table tableName="fourfly_flow_set" domainObjectName="FourflyFlowSet"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_flow_todo -->
+		<table tableName="fourfly_flow_todo" domainObjectName="FourflyFlowTodo"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_flow_todos -->
+		<table tableName="fourfly_flow_todos" domainObjectName="FourflyFlowTodos"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+
+		<!-- 41-50 -->
+		<!-- table  fourfly_flow_where -->
+		<table tableName="fourfly_flow_where" domainObjectName="FourflyFlowWhere"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_godepot -->
+		<table tableName="fourfly_godepot" domainObjectName="FourflyGodepot"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_goodm -->
+		<table tableName="fourfly_goodm" domainObjectName="fourflyGoodm"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_goodn -->
+		<table tableName="fourfly_goodn" domainObjectName="FourflyGoodn"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_goods -->
+		<table tableName="fourfly_goods" domainObjectName="FourflyGoods"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_goodss -->
+		<table tableName="fourfly_goodss" domainObjectName="FourflyGoodss"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_group -->
+		<table tableName="fourfly_group" domainObjectName="FourflyGroup"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_homeitems -->
+		<table tableName="fourfly_homeitems" domainObjectName="FourflyHomeitems"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_hrcheck -->
+		<table tableName="fourfly_hrcheck" domainObjectName="FourflyHrcheck"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_hrcheckn -->
+		<table tableName="fourfly_hrcheckn" domainObjectName="FourflyHrcheckn"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+
+		<!-- 51-60 -->
+		<!-- table  fourfly_hrchecks -->
+		<table tableName="fourfly_hrchecks" domainObjectName="FourflyHrchecks"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_hrdemint -->
+		<table tableName="fourfly_hrdemint" domainObjectName="FourflyHrdemint"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_hrkaohem -->
+		<table tableName="fourfly_hrkaohem" domainObjectName="FourflyHrkaohem"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_hrkaohen -->
+		<table tableName="fourfly_hrkaohen" domainObjectName="FourflyHrkaohen"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_hrkaohes -->
+		<table tableName="fourfly_hrkaohes" domainObjectName="FourflyHrkaohes"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_hrpositive -->
+		<table tableName="fourfly_hrpositive" domainObjectName="FourflyHrpositive"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_hrredund -->
+		<table tableName="fourfly_hrredund" domainObjectName="FourflyHrredund"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_hrsalarm -->
+		<table tableName="fourfly_hrsalarm" domainObjectName="FourflyHrsalarm"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_hrsalars -->
+		<table tableName="fourfly_hrsalars" domainObjectName="FourflyHrsalars"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_hrsalary -->
+		<table tableName="fourfly_hrsalary" domainObjectName="FourflyHrsalary"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+
+		<!-- 61-70 -->
+		<!-- table  fourfly_hrshebao -->
+		<table tableName="fourfly_hrshebao" domainObjectName="FourflyHrshebao"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_hrtransfer -->
+		<table tableName="fourfly_hrtransfer" domainObjectName="FourflyHrtransfer"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_hrtrsalary -->
+		<table tableName="fourfly_hrtrsalary" domainObjectName="FourflyHrtrsalary"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_im_group -->
+		<table tableName="fourfly_im_group" domainObjectName="FourflyImGroup"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_im_groupuser -->
+		<table tableName="fourfly_im_groupuser" domainObjectName="FourflyImGroupuser"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_im_history -->
+		<table tableName="fourfly_im_history" domainObjectName="FourflyImHistory"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_im_menu -->
+		<table tableName="fourfly_im_menu" domainObjectName="FourflyImMenu"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_im_mess -->
+		<table tableName="fourfly_im_mess" domainObjectName="FourflyImMess"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_im_messzt -->
+		<table tableName="fourfly_im_messzt" domainObjectName="FourflyImMesszt"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_infor -->
+		<table tableName="fourfly_infor" domainObjectName="FourflyInfor"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_infors -->
+		<table tableName="fourfly_infors" domainObjectName="FourflyInfors"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+
+		<!-- 71-80 -->
+		<!-- table  fourfly_knowledge -->
+		<table tableName="fourfly_knowledge" domainObjectName="FourflyKnowledge"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_knowtiku -->
+		<table tableName="fourfly_knowtiku" domainObjectName="FourflyKnowtiku"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_knowtraim -->
+		<table tableName="fourfly_knowtraim" domainObjectName="FourflyKnowtraim"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_knowtrais -->
+		<table tableName="fourfly_knowtrais" domainObjectName="FourflyKnowtrais"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_kqanay -->
+		<table tableName="fourfly_kqanay" domainObjectName="FourflyKqanay"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_kqdist -->
+		<table tableName="fourfly_kqdist" domainObjectName="FourflyKqdist"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_kqdisv -->
+		<table tableName="fourfly_kqdisv" domainObjectName="FourflyKqdisv"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_kqdkjl -->
+		<table tableName="fourfly_kqdkjl" domainObjectName="FourflyKqdkjl"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_kqdw -->
+		<table tableName="fourfly_kqdw" domainObjectName="FourflyKqdw"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_kqerr -->
+		<table tableName="fourfly_kqerr" domainObjectName="FourflyKqerr"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+
+		<!-- 81-90 -->
+		<!-- table  fourfly_kqinfo -->
+		<table tableName="fourfly_kqinfo" domainObjectName="FourflyKqinfo"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_kqjcmd -->
+		<table tableName="fourfly_kqjcmd" domainObjectName="FourflyKqjcmd"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_kqjsn -->
+		<table tableName="fourfly_kqjsn" domainObjectName="FourflyKqjsn"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_kqjuser -->
+		<table tableName="fourfly_kqjuser" domainObjectName="FourflyKqjuser"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_kqout -->
+		<table tableName="fourfly_kqout" domainObjectName="FourflyKqout"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_kqsjgz -->
+		<table tableName="fourfly_kqsjgz" domainObjectName="FourflyKqsjgz"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_kqxxsj -->
+		<table tableName="fourfly_kqxxsj" domainObjectName="FourflyKqxxsj"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_location -->
+		<table tableName="fourfly_location" domainObjectName="FourflyLocation"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_log -->
+		<table tableName="fourfly_log" domainObjectName="FourflyLog"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_logintoken -->
+		<table tableName="fourfly_logintoken" domainObjectName="FourflyLogintoken"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+
+		<!-- 91-100 -->
+		<!-- table  fourfly_meet -->
+		<table tableName="fourfly_meet" domainObjectName="FourflyMeet"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_menu -->
+		<table tableName="fourfly_menu" domainObjectName="FourflyMenu"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_news -->
+		<table tableName="fourfly_news" domainObjectName="FourflyNews"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_official -->
+		<table tableName="fourfly_official" domainObjectName="FourflyOfficial"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_option -->
+		<table tableName="fourfly_option" domainObjectName="FourflyOption"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_project -->
+		<table tableName="fourfly_project" domainObjectName="FourflyProject"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_reads -->
+		<table tableName="fourfly_reads" domainObjectName="FourflyReads"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_receipt -->
+		<table tableName="fourfly_receipt" domainObjectName="FourflyReceipt"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_repair -->
+		<table tableName="fourfly_repair" domainObjectName="FourflyRepair"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_reward -->
+		<table tableName="fourfly_reward" domainObjectName="FourflyReward"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_schedule -->
+		<table tableName="fourfly_schedule" domainObjectName="FourflySchedule"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+
+		<!-- 101-110 -->
+		<!-- table  fourfly_seal -->
+		<table tableName="fourfly_seal" domainObjectName="FourflySeal"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_sealapl -->
+		<table tableName="fourfly_sealapl" domainObjectName="FourflySealapl"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_sjoin -->
+		<table tableName="fourfly_sjoin" domainObjectName="FourflySjoin"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_subscribe -->
+		<table tableName="fourfly_subscribe" domainObjectName="FourflySubscribe"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_subscribeinfo -->
+		<table tableName="fourfly_subscribeinfo" domainObjectName="FourflySubscribeinfo"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_task -->
+		<table tableName="fourfly_task" domainObjectName="FourflyTask"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_todo -->
+		<table tableName="fourfly_todo" domainObjectName="FourflyTodo"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_tovoid -->
+		<table tableName="fourfly_tovoid" domainObjectName="FourflyTovoid"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_userinfo -->
+		<table tableName="fourfly_userinfo" domainObjectName="FourflyUserinfo"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_userinfos -->
+		<table tableName="fourfly_userinfos" domainObjectName="FourflyUserinfos"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+
+		<!-- 111-120 -->
+		<!-- table  fourfly_userract -->
+		<table tableName="fourfly_userract" domainObjectName="FourflyUserract"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_vcard -->
+		<table tableName="fourfly_vcard" domainObjectName="FourflyVcard"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_worc -->
+		<table tableName="fourfly_worc" domainObjectName="FourflyWorc"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_word -->
+		<table tableName="fourfly_word" domainObjectName="FourflyWord"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_wordeil -->
+		<table tableName="fourfly_wordeil" domainObjectName="FourflyWordeil"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_wordxie -->
+		<table tableName="fourfly_wordxie" domainObjectName="FourflyWordxie"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_work -->
+		<table tableName="fourfly_work" domainObjectName="FourflyWork"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_wotpl -->
+		<table tableName="fourfly_wotpl" domainObjectName="FourflyWotpl"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_wouser -->
+		<table tableName="fourfly_wouser" domainObjectName="FourflyWouser"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+		<!-- table  fourfly_wxtx_renlian -->
+		<table tableName="fourfly_wxtx_renlian" domainObjectName="FourflyWxtxRenlian"
+			   enableCountByExample="false" enableUpdateByExample="true"
+			   enableDeleteByExample="false" enableSelectByExample="true"
+			   selectByExampleQueryId="false"></table>
+
+	</context>
+	
+
+</generatorConfiguration>
