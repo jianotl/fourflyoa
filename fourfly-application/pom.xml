@@ -11,5 +11,13 @@
 
     <artifactId>fourflay-application</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.fourfly</groupId>
+            <artifactId>fourflay-database</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
 
 </project>
