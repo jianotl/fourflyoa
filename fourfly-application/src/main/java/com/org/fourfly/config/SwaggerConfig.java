@@ -13,7 +13,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 
 @Configuration
-@EnableSwagger2
 @Profile({"development", "test"})
 public class SwaggerConfig {
 
@@ -32,8 +31,8 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("AD-Exchange-在线API文档")
-                .description("AD-Exchange管理系统，后台测试API")
+                .title("斯菲办公系统-在线API文档")
+                .description("斯菲办公系统系统，后台测试API")
                 .version("1.0")
                 .build();
     }
