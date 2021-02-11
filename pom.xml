@@ -10,6 +10,7 @@
         <module>fourfly-database</module>
         <!-- 程序公共模块 -->
         <module>fourfly-common</module>
+        <module>fourfly-login</module>
         <!-- 以下是各业务子模块 -->
     </modules>
     <parent>
@@ -48,6 +49,11 @@
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>${mybatis-spring-boot-starter.version}</version>
+        </dependency>
+        <!-- spring security -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>

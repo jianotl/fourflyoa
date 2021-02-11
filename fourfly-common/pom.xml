@@ -11,5 +11,12 @@
 
     <artifactId>fourfly-common</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.fourfly</groupId>
+            <artifactId>fourfly-database</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>

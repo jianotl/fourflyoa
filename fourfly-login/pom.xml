@@ -9,10 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>fourfly-application</artifactId>
+    <artifactId>fourfly-login</artifactId>
 
     <dependencies>
-
         <!-- spring security -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -24,14 +23,6 @@
             <artifactId>fourfly-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-
-        <dependency>
-            <groupId>com.fourfly</groupId>
-            <artifactId>fourfly-login</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-
     </dependencies>
-
 
 </project>
