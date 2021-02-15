@@ -1,7 +1,7 @@
 # spring configuration
 spring:
   profiles:
-    active: developmen
+    active: development
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/fourflyoa?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -14,3 +14,7 @@ server:
 # todo 注意logging
 #logging:
 #  config: classpath:logging-config.xml
+
+mybatis:
+  type-aliases-package: com.org.fourfly
+  mapper-locations: classpath*:mapper/*/*.xml

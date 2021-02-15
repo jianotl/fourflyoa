@@ -22,7 +22,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
         .authorizeRequests()
         //访问"/"和"/home"路径的请求都允许
-        .antMatchers("/", "/home","/login","/login/*")
+        .antMatchers("/",
+                "/login", "/login/*",
+                //开放swagger访问
+                "/v2/api-docs",//swagger api json
+                "/swagger-resources/configuration/ui",//用来获取支持的动作
+                "/swagger-resources",//用来获取api-docs的URI
+                "/swagger-resources/configuration/security",//安全选项
+                "/swagger-ui.html",
+                "/webjars/**")
         .permitAll()
         //而其他的请求都需要认证
         .anyRequest()
