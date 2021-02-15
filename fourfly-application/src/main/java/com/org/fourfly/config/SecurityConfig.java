@@ -22,13 +22,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
         .authorizeRequests()
         //访问"/"和"/home"路径的请求都允许
-        .antMatchers("/",
-                "/login", "/login/*",
-                //开放swagger访问
-                "/v2/api-docs",//swagger api json
-                "/swagger-resources/configuration/ui",//用来获取支持的动作
-                "/swagger-resources",//用来获取api-docs的URI
-                "/swagger-resources/configuration/security",//安全选项
+        .antMatchers("/fourfly/",
+                "/fourfly/login", "/fourfly/login/*",
+                //开放swagger访问  swagger api json
+                "/v2/api-docs",
+                //用来获取支持的动作
+                "/swagger-resources/configuration/ui",
+                //用来获取api-docs的URI
+                "/swagger-resources",
+                //安全选项
+                "/swagger-resources/configuration/security",
                 "/swagger-ui.html",
                 "/webjars/**")
         .permitAll()
@@ -38,7 +41,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         .and()
         //修改Spring Security默认的登陆界面
         .formLogin()
-        .loginPage("/login")
+        .loginPage("/fourfly/login")
         .permitAll()
         .and()
         .logout()
