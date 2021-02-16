@@ -1,13 +1,17 @@
 package com.org.fourfly.service;
 
+import com.org.fourfly.domain.security.UserDetailsInfo;
+import com.org.fourfly.domain.security.UserGrantedAuthority;
 import com.org.fourfly.exception.NotFoundException;
 
+import com.org.fourfly.mapper.security.UserMapper;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @Author Jian
@@ -23,11 +27,12 @@ public class UserDetailsInfoService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        UserDetailsInfo userDetailsInfo = userMapper.selectUserByUsername(username);
-        if (userDetailsInfo == null) {
+       UserDetailsInfo userDetailsInfo = userMapper.selectUserByUsername(username);
+       if (userDetailsInfo == null) {
             throw new NotFoundException("用户不存在！");
-        }
-
-        return userDetailsInfo;
+       }
+       List<UserGrantedAuthority> userGrantedAuthorities = userMapper.selectUserAuthorities(userDetailsInfo.getId());
+       userDetailsInfo.setAuthorities(userGrantedAuthorities);
+       return userDetailsInfo;
     }
 }
