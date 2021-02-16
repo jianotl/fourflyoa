@@ -11,6 +11,7 @@
         <!-- 程序公共模块 -->
         <module>fourfly-common</module>
         <module>fourfly-login</module>
+        <module>fourfly-system</module>
         <!-- 以下是各业务子模块 -->
     </modules>
     <parent>
